@@ -1,11 +1,11 @@
 {
-  "name": "cordova-esptouch",
+  "name": "cordova-ionic-esptouch",
   "version": "0.0.8",
-  "description": "cordova esptouch (esp8266, esp32)",
+  "description": "ionic/cordova esptouch (esp8266, esp32)",
   "author": "fabus",
   "license": "MIT",
   "cordova": {
-    "id": "cordova-esptouch",
+    "id": "cordova-ionic-esptouch",
     "platforms": [
       "android",
       "ios"

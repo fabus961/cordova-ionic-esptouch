@@ -27,10 +27,10 @@ npm install git@github.com:web-brandings/cordova-ionic-vue-esptouch.git
 ```
 ### Functions
 ```
-function start(apSsid, apBssid, apPassword, deviceCountData, broadcastData, successCallback, failCallback) // starts broadcasting the credentials
-function stop(successCallback, failCallback); // stops broadcasting
-function getCurrentBSSID(successCallback, failCallback); // fetches wifi bssid from current connection
-function getCurrentWiFiSsid(successCallback, failCallback); // fetches wifi ssid from current connection
+function start(apSsid, apBssid, apPassword, deviceCountData, broadcastData, successCallback, failCallback) 
+function stop(successCallback, failCallback); 
+function getCurrentBSSID(successCallback, failCallback); 
+function getCurrentWiFiSsid(successCallback, failCallback); 
 ```
 
 ### Example

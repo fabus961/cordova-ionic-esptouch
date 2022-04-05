@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-esptouch" version="1.0.9">
+  <name>Cordova esptouch</name>
+  <description>Cordova esptouch plugin for esp8266 and ESP32</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,console</keywords>
+  <repo>https://github.com/coloz/cordova-plugin-esptouch.git</repo>
+
+  <engines>
+    <engine name="cordova-android" version=">=7.0.0" />
+  </engines>
+
+  <js-module name="esptouch" src="index.js">
+    <clobbers target="esptouch"/>
+  </js-module>
+
+  <!-- 	android platform -->
+  <platform name="android">
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+      <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    </config-file>
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="esptouch">
+        <param name="android-package" value="com.coloz.esptouch.esptouch"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    <source-file src="src/android/esptouch.java" target-dir="src/com/coloz/esptouch/" />
+    <lib-file src="src/android/libEsptouch_v0.3.7.0.jar" />
+  </platform>
+  <!-- 	ios platform -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="esptouch">
+        <param name="ios-package" value="esptouch"/>
+      </feature>
+    </config-file>
+    <header-file src="src/ios/esptouch.h"/>
+    <header-file src="src/ios/esptouch/ESP_NetUtil.h"/>
+    <header-file src="src/ios/esptouch/ESPAES.h"/>
+    <header-file src="src/ios/esptouch/ESPDataCode.h"/>
+    <header-file src="src/ios/esptouch/ESPTools.h"/>
+    <header-file src="src/ios/esptouch/ESPTouchDelegate.h"/>
+    <header-file src="src/ios/esptouch/ESPTouchResult.h"/>
+    <header-file src="src/ios/esptouch/ESPTouchTask.h"/>
+    <source-file src="src/ios/esptouch.m"/>
+    <source-file src="src/ios/libEsptouch.a" framework="true"/>
+    <framework src="CoreGraphics.framework" />
+    <framework src="UIKit.framework" />
+    <framework src="Foundation.framework" />
+    <edit-config target="NSLocationWhenInUseUsageDescription" file="Info.plist" mode="merge">
+      <string>need location access to find things nearby</string>
+    </edit-config>
+    <edit-config target="NSLocationAlwaysAndWhenInUseUsageDescription" file="Info.plist" mode="merge">
+      <string>need location access to find things nearby</string>
+    </edit-config>
+    <edit-config target="NSLocationAlwaysUsageDescription" file="Info.plist" mode="merge">
+      <string>need location access to find things nearby</string>
+    </edit-config>
+  </platform>
+</plugin>

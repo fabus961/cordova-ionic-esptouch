@@ -1,0 +1,21 @@
+{
+  "name": "cordova-esptouch",
+  "version": "0.0.8",
+  "description": "cordova esptouch (esp8266, esp32)",
+  "author": "fabus",
+  "license": "MIT",
+  "cordova": {
+    "id": "cordova-esptouch",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "1.0.0": {
+        "cordova": ">100"
+      }
+    }
+  }
+}

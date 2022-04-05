@@ -23,7 +23,7 @@ https://github.com/coloz/cordova-plugin-esptouch
 ### Installation  
 Ionic capacitor 
 ```
-npm install git@github.com:web-brandings/cordova-ionic-vue-esptouch.git
+npm install git@github.com:web-brandings/cordova-ionic-esptouch.git
 ```
 ### Functions
 ```

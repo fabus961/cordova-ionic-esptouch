@@ -50,5 +50,8 @@ esptouch.stop(res => { console.log(res) }, err => { console.log(err) });
 {"bssid":"ffffffffffff","ip":"192.168.1.123"}
 ```
 
+### Further Reading
+https://github.com/web-brandings/cordova-ionic-esptouch/wiki/EspTouch
+
 ### Known issues  
 When there are too many AP signals in the environment, the network pairing may fail, but this is not an issue with this plugin    

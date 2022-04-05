@@ -1,4 +1,4 @@
-# cordova-ionic-vue-esptouch  
+# cordova-ionic-esptouch  
 It is a cordova plug-in for esptouch networking with esp8266 and esp32, using the latest Espressif library, which can be used for ionic and cordova projects. Forked from coloz, added the wifi ssid and bssid fetching. 
 
 # espTouch lib  

@@ -1,5 +1,5 @@
-# cordova-esptouch  
-It is a cordova plug-in for esptouch networking with esp8266 and esp32, using the latest Espressif library, which can be used for ionic and cordova projects. This is a problem of the official esp module, which has existed for a long time and has not been solved by the official.
+# cordova-ionic-vue-esptouch  
+It is a cordova plug-in for esptouch networking with esp8266 and esp32, using the latest Espressif library, which can be used for ionic and cordova projects. Forked from coloz, added the wifi ssid and bssid fetching (tested on iOS only).
 
 # espTouch lib  
 android：0.3.7.0  
@@ -25,13 +25,19 @@ Ionic capacitor
 ```
 npm install git@git.urgrow.io:front-end/plugins/cordova-esptouch.git
 ```
-
+### Functions
+```
+function start(apSsid, apBssid, apPassword, deviceCountData, broadcastData, successCallback, failCallback) // starts broadcasting the credentials
+function stop(successCallback, failCallback); // stops broadcasting
+function getCurrentBSSID(successCallback, failCallback); // fetches wifi bssid from current connection
+function getCurrentWiFiSsid(successCallback, failCallback); // fetches wifi ssid from current connection
+```
 
 ### Example
 ```javascript
 import * as esptouch from 'cordova-esptouch'
 
-esptouch.start(ssid, "00:00:00:00:00:00", password, "1", "1", 
+esptouch.start(ssid, "00:00:00:00:00:00", "myPassword", "1", "1", 
   res => { console.log(res) },
   err => { console.log(err) });
 }

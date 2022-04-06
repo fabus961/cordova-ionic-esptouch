@@ -40,7 +40,6 @@ import * as esptouch from 'cordova-ionic-esptouch'
 esptouch.start(ssid, "00:00:00:00:00:00", "myPassword", "1", "1", 
   res => { console.log(res) },
   err => { console.log(err) });
-}
 
 esptouch.stop(res => { console.log(res) }, err => { console.log(err) });
 

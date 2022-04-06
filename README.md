@@ -35,7 +35,7 @@ function getCurrentWiFiSsid(successCallback, failCallback);
 
 ### Example
 ```javascript
-import * as esptouch from 'cordova-esptouch'
+import * as esptouch from 'cordova-ionic-esptouch'
 
 esptouch.start(ssid, "00:00:00:00:00:00", "myPassword", "1", "1", 
   res => { console.log(res) },
